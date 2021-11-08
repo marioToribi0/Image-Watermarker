@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+    <form class="mb-5" id="input_files" method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
+        <h1>Place Watermarker</h1>
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Upload your images<span
+                    style="color: #F05454;">*</span></label>
+            {{form.img_files(class_="form-control", accept="image/*")}}
+            <!-- <input class="form-control" type="file" id="formFileMultiple" name="img_files" multiple> -->
+        </div>
+
+        <div class="mb-3 watermarker">
+            <div class="mb-2">
+                <label for="formFileSm" class="form-label">Watermarker<span style="color: #F05454;">*</span></label>
+                {{form.wat_file(class_="form-control form-control-sm", accept="image/*")}}
+                <!-- <input class="form-control form-control-sm" id="formFileSm" name="wat_file" type="file"> -->
+            </div>
+            <div class="mb-2 input-group input-group-sm">
+                <span class="input-group-text">Percentage position</span>
+                {{form.width(class_="form-control")}}
+                <!-- <input type="text" aria-label="width" class="form-control"> -->
+                <span class="input-group-text">%</span>
+                {{form.height(class_="form-control")}}
+                <!-- <input type="text" aria-label="height" class="form-control"> -->
+                <span class="input-group-text">%</span>
+            </div>
+            <div class="mb-2 input-group input-group-sm">
+                {{form.transparency(class_="form-control", placeholder="Transparency")}}
+                <!-- <input type="text" class="form-control" aria-label="transparency" placeholder="Transparency"> -->
+                <span class="input-group-text">%</span>
+            </div>
+        </div>
+
+        <div class="text-end">
+            {{form.submit(class_="btn btn-outline-warning")}}
+            <!-- <button type="submit" class="btn btn-outline-warning">Transform</button> -->
+        </div>
+    </form>
+{% include "footer.html" %}
