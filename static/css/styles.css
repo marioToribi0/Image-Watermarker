@@ -34,7 +34,7 @@ body{
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 100px;
     width: 70%;
     transition: 1s;
 }
@@ -72,4 +72,64 @@ footer:hover{
 
 .offcanvas.show, .offcanvas{
     background: #364F6B;
+}
+
+@media (max-width:470px) {
+    a.navbar-brand span{
+        display: none;
+    }
+    a.navbar-brand:after{
+        content: "Image Transformer";
+    }
+    #input_files{
+        background: #30475E;
+        border-radius:10px ;
+        padding: 40px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 90px;
+        width: 90%;
+        transition: 1s;
+    }
+}
+@media (max-width:370px) {
+    a.navbar-brand span{
+        display: none;
+    }
+    a.navbar-brand:after{
+        content: "Image Transformer";
+    }
+    #input_files{
+        background: #30475E;
+        border-radius:10px ;
+        padding: 30px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 90px;
+        margin-bottom: 0;
+        width: 90%;
+        transition: 1s;
+    }
+}
+@media (max-width:353px) {
+    a.navbar-brand span{
+        display: none;
+    }
+    a.navbar-brand:after{
+        content: "Transformer";
+    }
+    #input_files{
+        background: #30475E;
+        border-radius:10px ;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-top: 90px;
+        margin-bottom: 0;
+        width: 95%;
+        transition: 1s;
+    }
 }
