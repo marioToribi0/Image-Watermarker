@@ -101,7 +101,7 @@ footer:hover{
         transition: 1s;
     }
 }
-@media (max-width:375px) {
+@media (max-width:412px) {
     a.navbar-brand span{
         display: none;
     }
